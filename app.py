@@ -6,6 +6,7 @@ from dash import dcc, html, callback
 df = pd.read_csv('https://plotly.github.io/datasets/country_indicators.csv', sep=',')
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 available_indicators = df['Indicator Name'].unique()
 
